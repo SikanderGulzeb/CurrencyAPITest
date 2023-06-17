@@ -5,13 +5,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.junit.Assert;
 import utils.ConfigReader;
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.LinkedHashMap;
 
@@ -39,7 +40,6 @@ public class ExchangeRateTest {
 
     @Given("I have a valid API key")
     public void loadApiKeyFromConfigFile() {
-        apiKey = ConfigReader.getProperty("API_KEY");
     }
 
     @Given("I have a invalid API key")
@@ -91,7 +91,8 @@ public class ExchangeRateTest {
     public void verifyResponseContainsTodaysDate() {
         String dateTime = response.jsonPath().get("updated");
         String responseDate = dateTime.split(" ")[0];
-        LocalDate currentDate = LocalDate.now();
+        ZonedDateTime utcDateTime = ZonedDateTime.now(ZoneId.of("UTC"));
+        LocalDate currentDate = utcDateTime.toLocalDate();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String today = currentDate.format(formatter);
         Assert.assertEquals("Unexpected date in the response", today, responseDate);
