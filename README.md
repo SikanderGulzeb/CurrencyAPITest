@@ -6,24 +6,24 @@ This readme provides instructions on how to execute and run the currency exchang
 
 Before running the tests, ensure you have the following:
 
-A valid API key from FastForex. You will need this to authenticate your requests.
-Java Development Kit (JDK) installed on your machine.
-Gradle build tool installed on your machine.
+* A valid API key from FastForex to authenticate your requests.
+* JDK installed on your machine. 
+* Gradle build tool installed on your machine.
 
 
 ### Getting Started
 
 To get started with the API tests, follow the steps below:
 
-Clone or download the project from the repository.
+* Clone or download the project from the repository.
+* Open the project in your preferred IDE.
+* Navigate to below directory
 
-Open the project in your preferred IDE.
+    
+            src/test/resources
 
-Navigate to below directory
+* Open the below config file and replace the <API_KEY> placeholder with your actual API key obtained from FastForex.
 
-    src/test/resources
-
-Open the below config file and replace the <API_KEY> placeholder with your actual API key obtained from FastForex.
 
     config.properties
 
@@ -33,11 +33,10 @@ You can execute the tests using either Gradle build or the command line.
 
 #### Using Gradle build:
 
-Open a terminal or command prompt.
+* Open a terminal or command prompt.
+* Navigate to the root directory of the project.
+* Run the following command to execute the tests:
 
-Navigate to the root directory of the project.
-
-Run the following command to execute the tests:
 
     ./gradlew clean test
 
