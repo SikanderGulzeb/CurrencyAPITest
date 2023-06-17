@@ -20,7 +20,7 @@ To get started with the API tests, follow the steps below:
 * Navigate to below directory
 
     
-            src/test/resources
+    src/test/resources
 
 * Open the below config file and replace the <API_KEY> placeholder with your actual API key obtained from FastForex.
 
