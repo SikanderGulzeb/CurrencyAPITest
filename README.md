@@ -20,12 +20,12 @@ To get started with the API tests, follow the steps below:
 * Navigate to below directory
 
     
-    src/test/resources
+        src/test/resources
 
 * Open the below config file and replace the <API_KEY> placeholder with your actual API key obtained from FastForex.
 
 
-    config.properties
+        config.properties
 
 ### Executing the Tests
 
@@ -38,7 +38,8 @@ You can execute the tests using either Gradle build.
 * Run the following command to execute the tests:
 
 
-    ./gradlew clean test
+
+      ./gradlew clean test
 
 The tests will be executed, and the results will be displayed in the console.
 
@@ -50,11 +51,11 @@ Once the test execution completes, a test report will be generated in the below 
 
 cucumber-html-report
     
-    build/reports/cucumber-html-reports
+        build/reports/cucumber-html-reports
 
 cucumber.json
     
-    build/cucumber-reports
+        build/cucumber-reports
 
 
 ### API Endpoint Details
@@ -63,7 +64,7 @@ The tests are designed to validate the currency exchange functionality using the
 
 #### Endpoint:
 
-    https://api.fastforex.io/
+        https://api.fastforex.io/
 
 Please refer to the FastForex API documentation for more information on the available endpoints and request parameters.
 
