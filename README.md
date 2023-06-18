@@ -29,7 +29,7 @@ To get started with the API tests, follow the steps below:
 
 ### Executing the Tests
 
-You can execute the tests using either Gradle build or the command line.
+You can execute the tests using either Gradle build.
 
 #### Using Gradle build:
 
