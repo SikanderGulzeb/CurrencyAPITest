@@ -41,7 +41,7 @@ Feature: Testing Exchange Rate API
       | EUR  |
       | GBP  |
 
-  Scenario: Invalid base currency key provided
+  Scenario: Invalid base currency provided
     Given I have a valid API key
     When I send a GET request to the API endpoint
     When I send a GET request to the API endpoint with base currency "ABC"
