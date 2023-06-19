@@ -29,9 +29,7 @@ To get started with the API tests, follow the steps below:
 
 ### Executing the Tests
 
-You can execute the tests using either Gradle build.
-
-#### Using Gradle build:
+ Using Gradle build:
 
 * Open a terminal or command prompt.
 * Navigate to the root directory of the project.
