@@ -43,7 +43,6 @@ Feature: Testing Exchange Rate API
 
   Scenario: Invalid base currency provided
     Given I have a valid API key
-    When I send a GET request to the API endpoint
     When I send a GET request to the API endpoint with base currency "ABC"
     Then the response status code should be 400
     And the response body should contain the error message "unsupported target currency"
